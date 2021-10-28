@@ -1,4 +1,4 @@
-""" This is the increment function"""
+""" This is the main Calculator Class"""
 class Calculator:
     """ This is the Calculator class"""
 
@@ -15,11 +15,23 @@ class Calculator:
         """ subtract number from result"""
         self.result = self.result - value_a
         return self.result
+    def add_numbers(self, value_a, value_b):
+        """ add two numbers and store the result"""
+        self.result = value_a + value_b
+        return self.result
+    def subtract_numbers(self, value_a, value_b):
+        """ subtract two numbers and store the result"""
+        self.result = value_a - value_b
+        return self.result
     def multiply_numbers(self, value_a, value_b):
         """ multiply two numbers and store the result"""
         self.result = value_a * value_b
         return self.result
     def divide_numbers(self, value_a, value_b):
-        """ multiply two numbers and store the result"""
-        self.result = value_a / value_b
-        return self.result
+        """ divide two numbers and store the result"""
+        try:
+            self.result = value_a / value_b
+        except ZeroDivisionError as err:
+            raise ValueError from err
+        else:
+            return self.result
