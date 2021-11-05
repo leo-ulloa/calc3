@@ -1,37 +1,59 @@
-""" This is the main Calculator Class"""
+""" This is the increment function"""
+from calculator.calculations.addition import Addition
+from calculator.calculations.subtraction import Subtraction
+from calculator.calculations.multiplication import Multiplication
+from calculator.calculations.division import Division
+
 class Calculator:
     """ This is the Calculator class"""
-
-    result = 0
-    def get_result(self):
-        """ Get Result of Calculation"""
-        return self.result
-
-    def add_number(self, value_a):
-        """ adds number to result"""
-        self.result = self.result + value_a
-        return self.result
-    def subtract_number(self, value_a):
-        """ subtract number from result"""
-        self.result = self.result - value_a
-        return self.result
-    def add_numbers(self, value_a, value_b):
-        """ add two numbers and store the result"""
-        self.result = value_a + value_b
-        return self.result
-    def subtract_numbers(self, value_a, value_b):
-        """ subtract two numbers and store the result"""
-        self.result = value_a - value_b
-        return self.result
-    def multiply_numbers(self, value_a, value_b):
-        """ multiply two numbers and store the result"""
-        self.result = value_a * value_b
-        return self.result
-    def divide_numbers(self, value_a, value_b):
-        """ divide two numbers and store the result"""
-        try:
-            self.result = value_a / value_b
-        except ZeroDivisionError as err:
-            raise ValueError from err
-        else:
-            return self.result
+    history = []
+    @staticmethod
+    def get_history_size():
+        """ get the number of calculations from history"""
+        return len(Calculator.history)
+    @staticmethod
+    def clear_history():
+        """ Clear the calculation history"""
+        Calculator.history.clear()
+        return True
+    @staticmethod
+    def get_calculation(num):
+        """ get a specific calculation from history"""
+        return Calculator.history[num]
+    @staticmethod
+    def remove_calculation(num):
+        """ remove a specific calculation from history"""
+        for item in Calculator.history:
+            if item == num:
+                Calculator.history.remove(item)
+        return True
+    @staticmethod
+    def get_calculation_last():
+        """ get last calculation from history"""
+        return Calculator.history[-1]
+    @staticmethod
+    def get_calculation_first():
+        """ get first calculation from history"""
+        return Calculator.history[0]
+    @staticmethod
+    def add_numbers(*args):
+        """ adds list of numbers"""
+        addition = Addition(args)
+        Calculator.history.append(addition)
+        return addition.get_result()
+    @staticmethod
+    def subtract_numbers(*args):
+        """ subtract a list of numbers from result"""
+        subtraction = Subtraction(args)
+        Calculator.history.append(subtraction)
+        return subtraction.get_result()
+    @staticmethod
+    def multiply_numbers(*args):
+        """ multiplication number from result"""
+        multiplication = Multiplication(args)
+        return multiplication.get_result()
+    @staticmethod
+    def divide_numbers(*args):
+        """ divide number from result"""
+        division = Division(args)
+        return division.get_result()
