@@ -12,3 +12,4 @@ branches:
     - main
     - development
     - version_2
+    - version_3
