@@ -1,59 +1,33 @@
 """ This is the increment function"""
-from calculator.calculations.addition import Addition
-from calculator.calculations.subtraction import Subtraction
-from calculator.calculations.multiplication import Multiplication
-from calculator.calculations.division import Division
+from calculator.history.calculations import Calculations
 
+#the calculator class just contains the methods to calculate
 class Calculator:
     """ This is the Calculator class"""
-    history = []
+    #the calculator class just calls methods on Calculations class
     @staticmethod
-    def get_history_size():
-        """ get the number of calculations from history"""
-        return len(Calculator.history)
+    def get_last_result_value():
+        """ This is the gets the result of the calculation"""
+        # I made this method so that I don't have more than one action per function
+        return Calculations.get_last_calculation_result_value()
     @staticmethod
-    def clear_history():
-        """ Clear the calculation history"""
-        Calculator.history.clear()
-        return True
-    @staticmethod
-    def get_calculation(num):
-        """ get a specific calculation from history"""
-        return Calculator.history[num]
-    @staticmethod
-    def remove_calculation(num):
-        """ remove a specific calculation from history"""
-        for item in Calculator.history:
-            if item == num:
-                Calculator.history.remove(item)
-        return True
-    @staticmethod
-    def get_calculation_last():
-        """ get last calculation from history"""
-        return Calculator.history[-1]
-    @staticmethod
-    def get_calculation_first():
-        """ get first calculation from history"""
-        return Calculator.history[0]
-    @staticmethod
-    def add_numbers(*args):
+    #tuple allows me to pass in as many values as a I want
+    def add_numbers(tuple_values: tuple):
         """ adds list of numbers"""
-        addition = Addition(args)
-        Calculator.history.append(addition)
-        return addition.get_result()
+        Calculations.add_addition_calculation(tuple_values)
+        return True
     @staticmethod
-    def subtract_numbers(*args):
+    def subtract_numbers(tuple_values: tuple):
         """ subtract a list of numbers from result"""
-        subtraction = Subtraction(args)
-        Calculator.history.append(subtraction)
-        return subtraction.get_result()
+        Calculations.add_subtraction_calculation(tuple_values)
+        return True
     @staticmethod
-    def multiply_numbers(*args):
+    def multiply_numbers(tuple_values: tuple):
         """ multiplication number from result"""
-        multiplication = Multiplication(args)
-        return multiplication.get_result()
+        Calculations.add_multiplication_calculation(tuple_values)
+        return True
     @staticmethod
-    def divide_numbers(*args):
-        """ divide number from result"""
-        division = Division(args)
-        return division.get_result()
+    def divide_numbers(tuple_values: tuple):
+        """ multiplication number from result"""
+        Calculations.add_division_calculation(tuple_values)
+        return True

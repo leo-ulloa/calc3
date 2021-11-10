@@ -10,6 +10,6 @@ class Division(Calculation):
         for value in self.values:
             value_list.append(value)
         result = value_list[0]
-        for num in range(1, len(list)):
+        for num in range(1, len(value_list)):
             result /= value_list[num]
         return result
