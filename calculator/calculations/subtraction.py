@@ -5,10 +5,10 @@ class Subtraction(Calculation):
     """subtraction calculation object"""
     def get_result(self):
         """get the subtraction results"""
-        value_list = []
+        sub_list = []
         for value in self.values:
-            value_list.append(value)
-        result = value_list[0]
-        for num in range(1, len(value_list)):
-            result = result - value_list[num]
+            sub_list.append(value)
+        result = sub_list[0]
+        for num in range(1, len(sub_list)):
+            result = result - sub_list[num]
         return result
