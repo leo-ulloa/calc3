@@ -1,4 +1,4 @@
-"""Testing the Calculator"""
+"""Testing History Functions"""
 from calculator.history.calculations import Calculations
 from calculator.calculations.subtraction import Subtraction
 from calculator.calculations.multiplication import Multiplication
