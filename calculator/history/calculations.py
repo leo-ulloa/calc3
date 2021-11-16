@@ -48,7 +48,7 @@ class Calculations:
         return True
     @staticmethod
     def add_subtraction_calculation(values):
-        """create a subtraction object to history"""
+        """add a subtraction object to history"""
         Calculations.add_calculation(Subtraction.create(values))
         return True
     @staticmethod

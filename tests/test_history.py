@@ -32,3 +32,4 @@ def test_get_calc_first_result_object():
 def test_clear_calculation_history():
     """test clear history"""
     assert Calculations.clear_history() is True
+    assert Calculations.count_history() == 0
