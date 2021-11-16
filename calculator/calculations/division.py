@@ -11,5 +11,10 @@ class Division(Calculation):
             value_list.append(value)
         result = value_list[0]
         for num in range(1, len(value_list)):
-            result /= value_list[num]
+            try:
+                result /= value_list[num]
+            except ZeroDivisionError as err:
+                raise ZeroDivisionError from err
+            else:
+                continue
         return result
