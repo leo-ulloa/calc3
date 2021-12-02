@@ -1,5 +1,5 @@
 """Testing Calculator"""
-from calculator.main import Calculator
+from calculator.calc import Calculator
 from calculator.history.calculations import Calculations
 
 def test_calculator_add_static():
