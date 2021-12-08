@@ -9,8 +9,8 @@ def index():
     """index  Route Response"""
     return render_template('index.html')
 
-@app.route("/basicform", methods=['GET', 'POST'])
-def basicform():
+@app.route("basic_form", methods=['GET', 'POST'])
+def basic_form():
     """Post Request Handling"""
     # pylint: disable=no-else-return
     if request.method == 'POST':
