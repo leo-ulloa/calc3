@@ -13,8 +13,8 @@ class Division(Calculation):
         for num in range(1, len(value_list)):
             try:
                 result /= value_list[num]
-            except ZeroDivisionError as err:
-                raise ZeroDivisionError from err
+            except ZeroDivisionError:
+                return "ZeroDivisionError"
             else:
                 continue
         return result

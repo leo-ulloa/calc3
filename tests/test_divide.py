@@ -1,5 +1,5 @@
 """Testing Division"""
-import pytest
+
 from calculator.calculations.division import Division
 
 
@@ -14,6 +14,4 @@ def test_division_throws_exception():
     """test divide by 0 raises error"""
     nums = (10.0, 0.0)
     err_test = Division(nums)
-    with pytest.raises(Exception) as err:
-        err_test.get_result()
-    assert err.type == ZeroDivisionError
+    assert err_test.get_result() == "ZeroDivisionError"
