@@ -1,6 +1,6 @@
 """A simple flask web app"""
 from flask import render_template
-from controller import ControllerBase
+from app.controllers.controller import ControllerBase
 # pylint: disable=(too-few-public-methods)
 class IndexController(ControllerBase):
     """A simple flask web app"""

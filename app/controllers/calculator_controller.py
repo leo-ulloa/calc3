@@ -1,6 +1,6 @@
 """A simple flask web app"""
 from flask import render_template, request, flash
-from controller import ControllerBase
+from app.controllers.controller import ControllerBase
 from calculator.main import Calculator
 
 
