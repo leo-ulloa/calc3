@@ -5,7 +5,7 @@ class Calculator:
     @staticmethod
     def get_last_result_value():
         """ This is the gets the result of the calculation"""
-        return Calculations.get_last_calculation()
+        return Calculations.get_last_value()
     @staticmethod
     def addition(values: tuple):
         """sum of tuple"""

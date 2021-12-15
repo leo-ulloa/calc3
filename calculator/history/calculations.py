@@ -5,20 +5,20 @@ from calculator.calculations.multiplication import Multiplication
 from calculator.calculations.division import Division
 class Calculations:
     """Calculations class manages the history of calculations"""
-    _history = []
+    history = []
     @staticmethod
     def clear_history():
         """clear history"""
-        Calculations._history.clear()
+        Calculations.history.clear()
         return True
     @staticmethod
     def count_history():
         """get number of items in history"""
-        return len(Calculations._history)
+        return len(Calculations.history)
     @staticmethod
     def get_last_calculation():
         """get last calculation"""
-        return Calculations._history[-1]
+        return Calculations.history[-1]
     @staticmethod
     def get_last_value():
         """get last value"""
@@ -27,7 +27,7 @@ class Calculations:
     @staticmethod
     def get_first_calculation():
         """get first calculation"""
-        return Calculations._history[0]
+        return Calculations.history[0]
     @staticmethod
     def get_first_value():
         """get first value"""
@@ -36,11 +36,11 @@ class Calculations:
     @staticmethod
     def get_calculation(num):
         """ get a specific calculation from history"""
-        return Calculations._history[num]
+        return Calculations.history[num]
     @staticmethod
     def add_calculation(calculation):
         """ add a generic calculation to history"""
-        return Calculations._history.append(calculation)
+        return Calculations.history.append(calculation)
     @staticmethod
     def add_addition_calculation(values):
         """create an addition and add object to history"""
