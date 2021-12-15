@@ -1,3 +1,5 @@
+"""csv"""
+# pylint: disable=(no-member)
 from pathlib import Path
 import pandas as pd
 
@@ -7,6 +9,7 @@ class CSVManager:
 
     @staticmethod
     def get_path():
+        """csv"""
         return str(Path(__file__).parent.absolute()) + "/result/data.csv"
 
     @staticmethod

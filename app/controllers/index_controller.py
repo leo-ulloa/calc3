@@ -1,7 +1,10 @@
 """A simple flask web app"""
+# pylint: disable=(too-few-public-methods)
+# pylint: disable=(no-name-in-module)
+# pylint: disable=(import-error)
 from flask import render_template
 from app.controllers.controller import ControllerBase
-# pylint: disable=(too-few-public-methods)
+
 class IndexController(ControllerBase):
     """A simple flask web app"""
     @staticmethod

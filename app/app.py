@@ -1,4 +1,6 @@
 """A simple flask web app"""
+# pylint: disable=(no-name-in-module)
+# pylint: disable=(import-error)
 from flask import Flask, render_template
 from werkzeug.debug import DebuggedApplication
 from app.controllers.index_controller import IndexController
@@ -27,6 +29,7 @@ def calculator_post():
 
 @app.route("/history", methods=["GET"])
 def table_get():
+    """A simple flask web app"""
     return HistoryController.get()
 
 @app.route("/pylint")

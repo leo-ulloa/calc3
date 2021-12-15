@@ -26,10 +26,3 @@ class Calculator:
         """divide tuple sequentially"""
         Calculations.add_division_calculation(values)
         return True
-    @staticmethod
-    def getHistory():
-        """ Get history """
-        ret_list = []
-        for i in range(Calculations.count_history()):
-            ret_list.append(Calculations.history[i].get_result())
-        return ret_list

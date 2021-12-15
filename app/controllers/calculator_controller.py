@@ -1,16 +1,20 @@
-from flask import render_template, request, flash, redirect, url_for, session
+"""A simple flask web app"""
+# pylint: disable=(no-name-in-module)
+# pylint: disable=(import-error)
+from flask import render_template, request, flash
 from app.controllers.controller import ControllerBase
 from calculator.main import Calculator
 from csvmanager.manager import CSVManager
 
 class CalculatorController(ControllerBase):
+    """A simple flask web app"""
     @staticmethod
     def post():
+        """A simple flask web app"""
         if request.form['value1'] == '' or request.form['value2'] == '':
             error = 'You must enter a value for value 1 and or value 2'
         else:
             flash('You successfully calculated')
-            # get the values out of the form
             value1 = int(request.form['value1'])
             value2 = int(request.form['value2'])
             operation = request.form['operation']
@@ -23,13 +27,5 @@ class CalculatorController(ControllerBase):
         return render_template('calculator.html', error=error)
     @staticmethod
     def get():
+        """A simple flask web app"""
         return render_template('calculator.html')
-
-
-    """
-    The easy calculator solution
-    1.  fix your calculator to read and write calculations to the csv
-    2.  fix the controller to read the the csv to history first
-    3.  Fix the controller to write the history to csv after you add the calculation to history
-    4.  Make a method on the calculator to return the history in the format you want to print in the template
-    """
