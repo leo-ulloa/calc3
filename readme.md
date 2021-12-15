@@ -10,3 +10,5 @@
 ![flask messages](images/validation.JPG)
 #History using CSV:
 ![flask messages](images/three.JPG)
+#Video link:
+https://youtu.be/QVEc5cVco7U
