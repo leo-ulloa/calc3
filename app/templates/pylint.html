@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+
+{% endblock %}
+{% block content %}
+    <article id="the-cosmos">
+
+        <h1>Introduction to Pylint</h1>
+        <p>
+          In this tutorial, you will get a basic understanding of Pylint and OOP terminologies
+      </p>
+      <h3>Pylint:</h3>
+      <p>
+          Pylint is a tool that can be imported and used to check for errors in python programs.
+      </p>
+      <p>
+          There are a few different ways to implement Pylint into your system. For this tutorial, you want to add a requirements.txt file to your project repository and run "pip install -r requirements.txt" in the terminal.
+      </p>
+      <img src="{{ url_for('static', filename='images/pip install.JPG') }}">
+      <p>
+          After successfully installing pylint, to use pylint you run the command "pytest --pylint --cov". This command will run pylint on every .py file in your project. It will return any errors found in any of your files and will tell you the type of error, line number, etc.
+      </p>
+      <img src="{{ url_for('static', filename='images/pylint.JPG') }}">
+      <h3>Object Oriented Programming Glossary:</h3>
+      <p>
+          Factory: An object for creating other objects
+      </p>
+      <p>
+          Object: a value in memory referenced by an identifier
+      </p>
+      <p>
+          Instantiation: Creation of an object
+      </p>
+      <p>
+          Class: abstract template for creating specific objects
+      </p>
+      <p>
+          Method: a function in OOP that performs an action
+      </p>
+      <p>
+          Property: fields of objects/classes with dedicated getter/setter routines
+      </p>
+      <p>
+          Namespace: declarative region that provides a scope to the identifiers inside of it
+      </p>
+      <p>
+          Constructor: allows you to initialize an object's properties when creating an object
+      </p>
+      <p>
+          Fixture: A known state against which a test is running
+      </p>
+      <p>
+          Type Hint: providing hints to function to only accept the given data type
+      </p>
+      <p>
+          Type Cast: The product of class inheritance
+      </p>
+      <p>
+          Unit Test: Testing all methods and functions of a program to ensure that they work in isolation
+      </p>
+      <p>
+          Static: Functions that provide functionality related to a particular class without requiring the programmer to first create an instance of that class
+      </p>
+    </article>
+{% endblock %}

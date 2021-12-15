@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <article id="the-cosmos">
+
+        <h1>Introduction to Object Oriented Programming Concepts in Python</h1>
+        <h3>Inheritance</h3>
+        <p>
+            Inheritance is the capability of a class to obtain properties and characteristics from another class.
+            A sub class is one that inherits properties from another class. A super class is one whose properties are inherited.
+        </p>
+        <img src="{{ url_for('static', filename='images/inheritance.JPG') }}">
+        <p>
+            In this example from the calculator program, we can see an example of inheritance.
+            The calculator class inherits the calculations class and has access to all of its methods.
+            The calculations class inherits each one of the calculation sub classes which include addition, subtraction, multiplication, and division.
+            Each of these classes inherits the calculation class. This program shows multiple layers of inheritance starting with the calculation class as the parent class
+            and the calculator class is the lowest child class. Visit the branch for Inheritance <a href="https://github.com/leo-ulloa/calc3/tree/Project_2_Inheritance/calculator">here</a>
+        </p>
+
+        <h3>Polymorphism</h3>
+        <p>
+            Polymorphism literally means to take many forms. In programming it refers to concept that different classes can be used with the same interface.
+        </p>
+        <img src="{{ url_for('static', filename='images/poly.JPG') }}">
+        <p>
+            In the above image we will look at this <a href="https://github.com/leo-ulloa/calc3/tree/Project_2_Polymorphism/calculator/calculations">calculator</a> program again to see an example of Polymorphism.
+            The calculation class is the base class for the addition, subtraction, multiplication, and division classes.
+            Based on what operation they want to perform on a given tuple of values, the user can instantiate the proper object and use its functions.
+        </p>
+        <h3>Encapsulation</h3>
+        <p>
+            Encapsulation refers to the progamming style where implementation details, variables, and other attributes are hidden and protected to increase security.
+        </p>
+        <img src="{{ url_for('static', filename='images/encap.JPG') }}">
+        <p>
+            One of the simplest ways of implementing Encapsulation would be to create variables, methods, or other attributes as private or protected.
+            Protected variables are accessible only to classes derived from it and private variables are only accessible within the class.
+            In the calculator example above, in the calculations class, the _history list is a protected variable, as denoted by the "_" underscore before the object name.
+            Visit the branch for Encapsulation <a href="https://github.com/leo-ulloa/calc3/blob/version_3/calculator/history/calculations.py">here</a>
+        </p>
+        <h3>Abstraction</h3>
+        <p>
+            Abstraction is the concept of only showing essential attributes and hiding any unnecessary details from the user.
+        </p>
+        <img src="{{ url_for('static', filename='images/abstract.JPG') }}">
+        <p>
+            In the calculator example proram, the calculation class and its subclasses are an example of abstraction.
+            The calculation class serves as the base for the addition, subtraction, multiplication, and division classes.
+            If a user would use any of these classes, they would instantiating an object from the respective class wihout paying any concern to how the calculation base class functions.
+            Visit the branch for Abstraction <a href="https://github.com/leo-ulloa/calc3/tree/Project_2_Polymorphism/calculator/calculations">here</a>
+        </p>
+
+
+    </article>
+{% endblock %}
