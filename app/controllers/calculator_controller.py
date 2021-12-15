@@ -24,7 +24,7 @@ class CalculatorController(ControllerBase):
             if check:
                 CSVManager.write(value1, value2, operation, result)
             return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
-        return render_template('calculator.html', error=error)
+        return render_template('calculator2.html', error=error)
     @staticmethod
     def get():
         """A simple flask web app"""
