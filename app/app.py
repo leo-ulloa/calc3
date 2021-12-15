@@ -3,6 +3,7 @@ from flask import Flask, render_template
 from werkzeug.debug import DebuggedApplication
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalculatorController
+from app.controllers.history_controller import HistoryController
 
 
 app = Flask(__name__)
@@ -23,6 +24,10 @@ def calculator_get():
 def calculator_post():
     """A simple flask web app"""
     return CalculatorController.post()
+
+@app.route("/history", methods=["GET"])
+def table_get():
+    return HistoryController.get()
 
 @app.route("/pylint")
 def pytest():
