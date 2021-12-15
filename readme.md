@@ -1,14 +1,14 @@
 # My Calculator Project 3
 [![Build Status](https://app.travis-ci.com/leo-ulloa/calc3.svg?branch=main)](https://app.travis-ci.com/leo-ulloa/calc3)
-#Pylint Passing:
+# Pylint Passing:
 ![screenshot](images/pylint.JPG)
-#Calculator:
+# Calculator:
 ![flask messages](images/one.JPG)
-#Result:
+# Result:
 ![flask messages](images/two.JPG)
-#Validation:
+# Validation:
 ![flask messages](images/validation.JPG)
-#History using CSV:
+# History using CSV:
 ![flask messages](images/three.JPG)
-#Video link:
+# Video link:
 https://youtu.be/QVEc5cVco7U
